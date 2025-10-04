@@ -9,18 +9,14 @@ public class PhoneNumberGenerator {
         int num1 = rand.nextInt(8);
         int num2 = rand.nextInt(8);
         int num3 = rand.nextInt(8);
+        int firstThree = num1 * 100 + num2 * 10 + num3;
         // TODO: Generate second three digits (XXX) 
-        // Constraint: Must be <= 742 (000-742)
-        int num4 = rand.nextInt(8);
-        int num5 = rand.nextInt(5);
-        int num6 = rand.nextInt(3);
+        int secondThree = rand.nextInt(743);
         // TODO: Generate third three digits (XXX)
         // No constraints (000-999)
-        int num7 = rand.nextInt(10);
-        int num8 = rand.nextInt(10);
-        int num9 = rand.nextInt(10);
+        int lastThree = rand.nextInt(1000);
         // TODO: Format and display phone number as XXX-XXX-XXX
         // Include the dashes in the output
-        System.out.println(num1 + num2 + num3 + "-" + num4 + num5 + num6 + "-" + num7 + num8 + num9);
+        System.out.printf("%03d-%03d-%03d\n", firstThree, secondThree, lastThree);
     }
 }
